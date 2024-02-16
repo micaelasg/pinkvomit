@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>la mg</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+  <!--dimensão janelas-->
+ 	<script type="text/javascript">
+		window.onresize = displayWindowSize;
+		window.onload = displayWindowSize;
+
+		function displayWindowSize() {
+			myWidth = window.innerWidth;
+			myHeight = window.innerHeight;
+			// your size calculation code here
+			document.getElementById("dimensions").innerHTML = myWidth + "x" + myHeight;
+		};
+	</script>
+
+	<!--scroll to-->
+	<!-- este link carrega a library de javascript através de um repositório online -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+
+    <!-- esta função identifica os links através de uma class e indica para que zona eles fazem scroll -->
+    <script type="text/javascript">
+    //<![CDATA[
+    $(function() {
+        function scrollToAnchor(aid) {
+            var aTag = $("a[name='" + aid + "']");
+            $('html,body').animate({
+                scrollTop: aTag.offset().top
+            }, 'slow');
+        }
+
+           $(".tohome").click(function() {
+            scrollToAnchor('home');
+        });
+
+        $(".tosobre").click(function() {
+            scrollToAnchor('sobre');
+        });
+
+        $(".totrabalhos").click(function() {
+            scrollToAnchor('trabalhos');
+        });
+
+        $(".tocontactos").click(function() {
+            scrollToAnchor('contactos');
+        });
+
+    }); //]]>
+    </script>
+
+</head>
+
+
+<body>
+
+	<header>
+		<nav class="cima">
+			<div class="nome"><a href="javascript:void(0)" class="tohome">la mg</a></div>
+  			<div class="nav"><a href="javascript:void(0)" class="tocontactos">contactos</a></div>
+  			<div class="nav"><a href="javascript:void(0)" class="totrabalhos">trabalhos</a></div>
+			<div class="nav"><a href="javascript:void(0)" class="tosobre">sobre</a></div>
+		</nav>
+	</header>
+
+
+
+	<a name="home"></a>
+	<section id="home"></section>
+
+
+	<a name="sobre"></a>
+		<section id="sobre">
+
+			<div class="texto"> 
+				Este site pertence à Laura Alves e Micaela Gomes. Somos duas cachopas de 20 aninhos e temos a mania que design é a nossa cena. Esta é a nossa plataforma online onde expomos o nosso trabalho. Somos da margem sul, e desde cedo que nos apercebemos que as artes eram a nossa cena, correntemente vivemos numa casinha nas Caldas da Rainha e estudamos Design Gráfico na Esad.cr. <br> 
+				A Laura quando crescer quer ser fixe como a mãe dela e ter um porshe cor-de-rosa, a Micaela não sei o que ela quer... Talvez queira ser rica.
+				(Sim, ela diz que quer ser rica.)
+			</div>
+		</section>
+	
+
+	<a name="trabalhos"></a>
+		<section id="trabalhos">
+			<main class="conteudo">
+				<div class="quadrado mix laura" class="conteudo" style="background-image: url(imagens/laura/1.jpg)"></div>
+				<div class="quadrado mix laura" style="background-image: url(imagens/laura/2.jpg)"></div>
+				<div class="quadrado mix micas" style="background-image: url(imagens/micas/1.jpg);"></div>
+				<div class="quadrado mix laura" style="background-image: url(imagens/laura/3.jpg)"></div>
+				<div class="quadrado mix micas" style="background-image: url(imagens/micas/3.jpg)"></div>
+				<div class="quadrado mix micas" style="background-image: url(imagens/micas/4.jpg)"></div>
+				<div class="quadrado mix laura" style="background-image: url(imagens/laura/4.jpg)"></div>
+				<div class="quadrado mix micas" style="background-image: url(imagens/micas/2.jpg)""></div>
+			</main>
+
+ 		 <div class="segundanav">
+			<a href="javascript:void(0)" data-filter=".laura">laura</a> | 
+			<a href="javascript:void(0)" data-filter=".micas">micaela</a> | 
+			<a href="javascript:void(0)" data-filter=".mix">todos</a>
+		</div>
+	</section>
+
+
+	<a name="contactos"></a>
+	<footer id="contactos">
+		<div class="fotosperfil">
+			<img class="lauraimg" src="imagens/laura/fotoperfil.png" alt="laura">
+			<div class="redes">
+				<a href="www.instagram.com/fyingmedusa"><img class="iconslaura" src="imagens/icons/insta.png" alt="instagram"></a>
+				<a href="www.behance.net/"><img class="iconslaura" src="imagens/icons/behance.png" alt="behance"></a>
+			</div>
+		</div>
+
+		<div class="fotosperfil">
+			<img class="micasimg" src="imagens/micas/fotoperfil.png" alt="micaela">
+			<div class="redes">
+				<a href="www.instagram.com/micaela.jpeg"><img class="iconsmicas" src="imagens/icons/insta.png" alt="instagram"></a>
+				<a href="www.behance.net/"><img class="iconsmicas" src="imagens/icons/behance.png" alt="behance">
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="script/mixitup.min.js"></script>
+ 
+	<script>
+    	var containerEl = document.querySelector('.conteudo');
+
+    	var mixer = mixitup(containerEl);
+	</script>
+
+
+
+</body>
+</html>

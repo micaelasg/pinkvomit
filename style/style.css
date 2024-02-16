@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:900|Lato');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffd4f1;
+
+	font-family: 'Lato', sans-serif;
+	color: blue;
+}
+
+header{ 
+	width: 100%;
+	height: 10vh;
+	position: fixed;
+	z-index: 2;
+}
+
+/*navegação*/
+
+.cima {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffd4f1;
+}
+
+.nav {
+    float: right;
+}
+
+.cima a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+}
+
+.nome {
+	float: left;
+}
+
+/*fim da navegação*/
+
+#home{
+	width: 100%;
+	height: 100vh;
+	background-image: url("../imagens/background.png");
+	background-size: cover;
+}
+
+/*sobre*/
+
+#sobre {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.texto {
+	width: 40%;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+/*trabalhos*/
+
+#trabalhos {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+
+main {
+	margin: 0 auto;
+	padding: 0 16px 0 16px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.quadrado {
+	width: 25%;
+	height: 50vh;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	background: no-repeat center;
+}
+
+.laura, .micas {
+	background-size: cover; 
+	align-content: center; 
+	justify-content: center;
+}
+
+.segundanav {
+	margin: 0;
+	padding: 20px;
+	height: 2vh;
+	bottom: 0;
+	text-align: center;
+	background-color: #ffd4f1;
+	position: absolute;
+}
+
+.segundanav a {
+	text-decoration: none;
+}
+
+/*contactos*/
+
+footer{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fotosperfil{
+	width: 30%;
+	margin: 0;
+	padding: 0;
+}
+
+.lauraimg, .micasimg {
+	width: 200px;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+}
+
+.redes {
+	width: 100%;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.redes a{
+	margin: 0 10px;
+}
+
+.iconslaura, .iconsmicas {
+	width: 20px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+/**ecra 1200 px **/
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/**ecra 768 px **/
+
+@media only screen and (max-width: 768px) {
+
+	body {
+		font-size: 10px;
+	}
+
+	footer {
+		flex-direction: column;
+	}
+
+	.quadrado {
+		width: 50%;
+		height: 50vh;
+	}
+	
+	.segundanav {
+		display: none;
+	}
+
+	.lauraimg, .micasimg {
+		width: 150px;
+	}
+}
+
+
+
+/**ecra 320 px **/
+
+@media only screen and (max-width: 320px) {
+
+	body {
+		font-size: 8px;
+	}
+
+	.texto {
+		width: 50%;
+	}
+
+	.quadrado {
+		width: 100%;
+		height: 50vh;
+	}
+
+	nav{
+		font-size: 10px;
+	}
+
+
+	.lauraimg, .micasimg {
+		width: 100px;
+	}
+}
